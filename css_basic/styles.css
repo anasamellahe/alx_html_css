@@ -2,6 +2,7 @@ body
 {
     display:  flex;
     flex-direction: column;
+
 }
 main
 {
@@ -19,3 +20,19 @@ main aside
     flex: 1;
      overflow-y: auto
 }
+
+
+/* my style  */
+
+header ul li a
+{
+    text-decoration: underline;
+} 
+
+header ul li a:hover
+{
+    text-decoration: none;
+    color: burlywood;
+}
+
+/* end of my style */
