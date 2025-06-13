@@ -11,11 +11,17 @@
 
 
 
-
 body
 {
 
-    background: url('images/background.png') no-repeat;
+
+    background: url('images/background.png') no-repeat center top, var(--background-color);
+    background-size: contain;
+    font-family: var(--main-font);
+    color: var(--main-color);
+    margin: 0;
+
+    /* background: url('images/background.png') no-repeat;
     background-size: contain;
     font-family: var(--main-font);
     color: var(--main-color);
@@ -23,7 +29,7 @@ body
 
     font-family: 'source sans pro';
     background-color: var(--background-color);
-    color: var(--main-color);
+    color: var(--main-color); */
 }
 
 
@@ -32,12 +38,13 @@ header nav
     display: flex;
     padding: 10px 0px;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 header  img
 {
-    width:  167.02px;
-    height: 29.46px;
+    min-width:  167.02px;
+    min-height: 29.46px;
     margin: auto;
 }
 
@@ -65,7 +72,7 @@ header  a{
 {
     /* border: 1px solid red; */
     background: transparent;
-    height: 900px;
+    min-height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -126,9 +133,10 @@ h1{
 {
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
+    gap: 50px;
 }
 .pro
 {
@@ -136,7 +144,7 @@ h1{
     display: flex;
     flex-direction: column;
     width: 150px;
-    height: 237px;
+    min-height: 237px;
     overflow: hidden;
     justify-content: space-between;
     gap: 5px;
@@ -158,3 +166,45 @@ h1{
     font-style: italic;
     text-align: center;
 }
+
+
+#quote
+{
+    display: flex;
+    align-items: center;
+    min-height: 392px;
+    background-color: #C271FF;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+#quote  img{
+    border-radius: 90px;
+    width: 160px;
+    height: 160px;
+}
+
+#quote :nth-child(2)
+{
+    display: flex;
+    flex-direction: column;
+    width: 730px;
+    max-width: 100%;
+
+}
+
+#quote blockquote
+{
+    margin: 0;
+    font-size: 22px;
+    font-family: var(--main-font);
+    margin-bottom: 30px;
+}
+#quote h3 , #quote p{
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font);
+    font-size: 22px;
+}
+
+
