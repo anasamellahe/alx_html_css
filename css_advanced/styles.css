@@ -128,7 +128,7 @@ h1{
 
 }
 
-#banner button
+.button
 {
     display: block;
     width: 162px;
@@ -375,4 +375,46 @@ h1{
 #cards-container .card p, .stars, #cards-container  .Rater, #cards-container h3, .stars
 {
     padding-left: 10px;
+}
+
+
+#membership
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 502px;
+    align-items: center;
+    padding: 80px;
+}
+#membership h2
+{
+    font-weight: lighter;
+}
+
+#pricing
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px 0px;
+} 
+#membership .button
+{
+    margin: 0px;
+}
+.pricing-plan img
+{
+    margin-bottom: 20px;
+}
+.pricing-plan
+{
+    text-align: center;
+    width: 257px;
+    max-width: 100%;
+    min-height: 153px;
+    overflow: hidden;
+    padding: 20px;
+    line-height: 30px;
 }
