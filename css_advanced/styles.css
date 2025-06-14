@@ -141,7 +141,19 @@ h1{
     font-size: 14px;
     font-weight:600;
     margin: 30px auto;
+    transition: all .2s;
     
+    
+}
+
+.button:hover
+{
+    background-color: #e2bdff;
+}
+.button:active
+{
+
+    transform: scale(0.9);
 }
 #banner > div span
 {
@@ -417,4 +429,59 @@ h1{
     overflow: hidden;
     padding: 20px;
     line-height: 30px;
+}
+
+
+#faq
+{
+
+    background-color: #FFFFFF;
+    color: black;
+    padding: 100px;
+}
+#faq h2
+{
+    font-size: 66px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#faq 
+{
+    display:flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#faq  .container > div
+{
+    display: flex;
+
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+
+}
+
+.question
+{
+    width: 350px;
+    max-width: 100%;
+    min-height: 242px;
+    color: #0716299d;
+    overflow: hidden;
+
+}
+.question h3
+{
+    color: #071629;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    
 }
