@@ -69,6 +69,7 @@ body
     font-family: var(--main-font);
     color: var(--main-color);
     margin: 0;
+
 }
 
 
@@ -337,7 +338,7 @@ h1{
     align-items: center;
     gap: 20px; 
     color: #C271FF;
-    font-size: 14;
+    font-size: 14px;
     margin: 0;
 }
 
@@ -378,7 +379,7 @@ h1{
     gap: 5px;
 }
 
-.stars > div :nth-child(5) 
+.stars > div div:nth-child(5) 
 {
     color: #D8D8D8;
 }
@@ -483,5 +484,31 @@ h1{
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 30px;
-    
+}
+
+footer > section
+{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+    gap: 20px;
+   
+}
+
+footer > section > div
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#icon i
+{
+    font-size: 30px;
+    letter-spacing: 20px;
+}
+footer section > p
+{
+    color: rgba(255, 255, 255, 38.17%);
 }
