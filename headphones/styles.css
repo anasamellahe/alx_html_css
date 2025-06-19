@@ -2,7 +2,11 @@
 :root
 {
     --main-font : 'Source Sans Pro', sans-serif;
-    --action-button-color: #FF6565
+    --cta-button-color: #FF6565;
+    --cta-button-text-color: #FFFFFF;
+    --cta-button-font-size: 14px;
+    --paragraph-font-size :  16px;
+    --heading-font-size : 32px;
 }
 
 
@@ -17,54 +21,39 @@ body
     background: url("./images/headphones_hero_1.jpg")  no-repeat   center top;
     background-size: cover;
     font-family: var(--main-font);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* min-height: 100vh; */
-    border: 1px solid greenyellow;
-
 }
-
+main
+{
+    border: 1px solid red;
+}
 header{
     position: relative;
     width: 90%;
-    border: 1px solid;
 }
 
-#menu
-{
-    /* display: none; */
-    position: absolute;
-    width: 20px;
-    height: 14px;
-    background: none;
-    border: none;
-    top: 50% - 14px;
-
-}
 #header-nav
 {
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 #header-nav img
 {
     width: 160px;
-    height: 32;
+    height: 32px;
 }
 
 /* ul element */
 
 #header-list
 {
-    
     display: flex;
     flex-wrap: wrap;
     min-height: 50px;
-    gap: 41px;
+    gap: 2vw;
     align-items: center;
     justify-content: center;
 }
@@ -88,37 +77,70 @@ header{
 
 #call-to-action
 {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 637px;
-    height: 313px;
-    margin: 50px auto;
+    max-width: 637px;
+    min-height: 313px;
+    margin: 15vh auto;
     color: white;
-
-
+    text-align: center;
 }
 
-#call-to-action h1
+.title
 {
-    font-family: var(--main-font);
     font-weight: bold;
-    font-size: 32px;
-    margin: 0px;
+    font-size: var(--heading-font-size);
 }
 
 
-#call-to-action p
+.cta-subtext, .description
 {
-    font-size: 16px;
+    font-size: var(--paragraph-font-size);
+    line-height: 26px;
 }
-.action-button
+
+.cta-subtext
 {
+    margin-bottom: 5vh;
+    font-weight: bold;
+}
+
+
+.cta-button
+{
+    background-color: var(--cta-button-color);
     border-radius: 22px;
-    background-color: var(--action-button-color);
+    color: var(--cta-button-text-color);
+    font-size: var(--cta-button-font-size);
+    font-weight: bold;
+    margin-bottom: 5vh;
     width: 162px;
     height: 44px;
     border: none;
 }
+
+/* section what we do  */
+
+#section-What-we-do
+{
+
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: black;
+    min-width: 100%;
+    background-color: white;
+}
+
+#section-What-we-do > .description
+{
+    max-width: 637px;
+    min-height: 184px;
+    border: 1px solid;
+}
+
+
