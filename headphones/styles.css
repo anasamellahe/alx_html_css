@@ -9,6 +9,7 @@
     --heading-font-size     :   32px;
     --icon-color            :   #FF6565;
     --icon-font-size        :   100px;
+    --cta-button-color-hover:   #fa8a8a;
 
 }
 
@@ -19,20 +20,33 @@
   box-sizing: border-box;
 }
 
-body
-{
-    background: url("./images/headphones_hero_1.jpg")  no-repeat   center top;
-    background-size: cover;
-    font-family: var(--main-font);
-}
 
-header{
+body {
     position: relative;
-    width: 90%;
-}
+    margin: 0;
+    font-family: var(--main-font);
+  }
+  
+  /* Full-page background covering header + call-to-action */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
 
 #header-nav
 {
+    width: 90%;
+    margin: auto;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -77,15 +91,13 @@ header{
 
 #call-to-action
 {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 637px;
-    min-height: 313px;
-    margin: 15vh auto;
     color: white;
     text-align: center;
+    justify-content: center;
+    min-height: 750px;
 }
 
 .title
@@ -97,8 +109,18 @@ header{
 
 .cta-subtext, .description
 {
+
     font-size: var(--paragraph-font-size);
     line-height: 26px;
+    display: flex;
+    align-items: center;
+    font-weight:  normal;
+}
+
+#call-to-action  > .description
+{
+    max-width: 637px;
+    min-height: 104;
 }
 
 .cta-subtext
@@ -119,6 +141,19 @@ header{
     width: 162px;
     height: 44px;
     border: none;
+    transition: all 0.2s , transform 0.1s;
+}
+
+
+.cta-button:hover
+{
+    background-color: var(--cta-button-color-hover);
+    box-shadow: 0px 0px 2px 2px rgb(32, 32, 32);
+}
+
+.cta-button:active
+{
+    transform: scale(0.9);
 }
 
 /* section what we do  */
@@ -131,7 +166,7 @@ header{
     align-items: center;
     text-align: center;
     gap: 5vh;
-    padding: 5vw;
+    padding: 10vw 0px;  
     color: #071629;
     /* min-width: 100%; */
     background-color: white;
@@ -142,8 +177,7 @@ header{
 {
     max-width: 637px;
     min-height: 184px;
-    border: 1px solid;
-    font-weight:  normal;
+    
 }
 
 .icon-container
@@ -157,7 +191,6 @@ header{
 .icon
 {
     height: 180px;
-    /* max-height: 100%; */
     width: 207px;
     display: flex;
     flex-direction: column;
@@ -184,7 +217,7 @@ header{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 5vw;
+    padding: 10vw 0px;
     gap: 5vh;
     background: url("./images/headphones_hero_2.jpg") no-repeat center top;
     background-size: cover;
@@ -195,7 +228,6 @@ header{
 {
     max-width: 637px;
     min-height: 184px;
-    font-weight:  normal;
 }
 
 
@@ -204,7 +236,6 @@ header{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border: 1px solid ;
     gap: 76px;
 }
 
@@ -217,4 +248,147 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+}
+
+.polygon > .title
+{
+    font-size: 46px;
+}
+
+.polygon > .description
+{
+    position: absolute;
+    bottom: calc(100% / 2 / 3);
+    align-self: center;
+    font-size: 14px;
+}
+
+/* section contact us */
+
+#contact-us
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    justify-content: center;
+    font-size: 14px;
+    gap:35px
+}
+
+#message-form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#message-form > textarea
+{
+    resize: vertical;
+}
+.input-field
+{
+    border: none;
+    border-bottom: 1px solid #979797;
+    height: 1px;
+    outline-style: none;
+    margin: 10px 0px;
+    width: 335px;
+    transition: height 0.2s 0.2s;
+}
+
+.input-field:focus, .input-field:hover
+{
+    height: 30px;
+}
+
+.input-field:not(:placeholder-shown)
+{
+    height: 30px;
+}
+
+
+#message-form > .cta-button
+{
+    align-self: center;
+    margin-top: 20px;
+}
+
+
+/* footer  */
+
+
+#footer-section
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #071629;
+    color: #FFFFFF;
+    min-height: 249px;
+}
+
+#footer-section  img
+{
+    width: 160px;
+    height: 32px;
+}
+#footer-section > div
+{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+#footer-section #icon
+{
+    font-size: 20px;
+    word-spacing: 20px;
+}
+#footer-section p
+{
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+}
+
+@media (max-width:480px){
+    
+
+
+    #footer-section > div
+    {
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 45px;
+    }
+
+ 
+    #header-nav
+    {
+        position: relative;
+        border: 1px solid black;
+        flex-direction: column;
+    }
+
+    #header-nav::before
+    {
+        content: "";
+        
+
+    }
+
+    #header-nav ul
+    {
+        flex-direction: column;
+        display: none;
+    }
 }
