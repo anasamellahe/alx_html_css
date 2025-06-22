@@ -1,12 +1,15 @@
 
 :root
 {
-    --main-font : 'Source Sans Pro', sans-serif;
-    --cta-button-color: #FF6565;
-    --cta-button-text-color: #FFFFFF;
-    --cta-button-font-size: 14px;
-    --paragraph-font-size :  16px;
-    --heading-font-size : 32px;
+    --main-font             :   'Source Sans Pro', sans-serif;
+    --cta-button-color      :   #FF6565;
+    --cta-button-text-color :   #FFFFFF;
+    --cta-button-font-size  :   14px;
+    --paragraph-font-size   :   16px;
+    --heading-font-size     :   32px;
+    --icon-color            :   #FF6565;
+    --icon-font-size        :   100px;
+
 }
 
 
@@ -22,10 +25,7 @@ body
     background-size: cover;
     font-family: var(--main-font);
 }
-main
-{
-    border: 1px solid red;
-}
+
 header{
     position: relative;
     width: 90%;
@@ -126,21 +126,95 @@ header{
 #section-What-we-do
 {
 
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    color: black;
-    min-width: 100%;
+    gap: 5vh;
+    padding: 5vw;
+    color: #071629;
+    /* min-width: 100%; */
     background-color: white;
 }
+
 
 #section-What-we-do > .description
 {
     max-width: 637px;
     min-height: 184px;
     border: 1px solid;
+    font-weight:  normal;
+}
+
+.icon-container
+{
+
+    display: flex;
+    gap: 58px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.icon
+{
+    height: 180px;
+    /* max-height: 100%; */
+    width: 207px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.icon .description
+{
+    font-size: 14px;
+    color: #071629;
+}
+.icon > span
+{
+    color:var(--icon-color);
+    font-size: var(--icon-font-size);
+    line-height: 1
+}
+
+/* section results  */
+
+#section-results
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5vw;
+    gap: 5vh;
+    background: url("./images/headphones_hero_2.jpg") no-repeat center top;
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+#section-results > .description
+{
+    max-width: 637px;
+    min-height: 184px;
+    font-weight:  normal;
 }
 
 
+.polygon-container
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid ;
+    gap: 76px;
+}
+
+.polygon
+{
+    background: url("./images/pentagone.png") no-repeat;
+    background-size: contain;
+    width: 190px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
