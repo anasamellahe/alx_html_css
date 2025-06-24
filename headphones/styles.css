@@ -244,8 +244,8 @@ body {
 
 .polygon
 {
-    background: url("./images/pentagone.png") no-repeat;
-    background-size: contain;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background-color:#FF6565;
     width: 190px;
     height: 190px;
     display: flex;
